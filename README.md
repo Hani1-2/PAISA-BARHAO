@@ -1,14 +1,15 @@
 # Project Name: SmartInvest.AI
 
 ## Project Deployment
-1. Project is deployed at following URL `https://samrtinvestai.netlify.app/`.
+1. Project is deployed at the following URL `https://samrtinvestai.netlify.app/`.
+2. Google Cloud Run is used for the Backend and Netlify for Frontend deployment.
 
 ## Project Architecture
 ![SmartInvest.AI](architecture.png)
 
 
 ## Description
-SmartInvest.AI will provide accessible insights into various investment options, including stocks, commodities, and mutual funds, tailored to the Pakistani market. Through the app, users can gain valuable information and comparisons to make informed investment decisions, promoting financial literacy and inclusion.
+SmartInvest.AI will provide accessible insights into various investment options tailored to the Pakistani market, including stocks, commodities, and mutual funds. Through the app, users can gain valuable information and comparisons to make informed investment decisions, promoting financial literacy and inclusion.
 
 ## Technologies Used
 - Python
@@ -16,13 +17,18 @@ SmartInvest.AI will provide accessible insights into various investment options,
 - FAISS
 - LangChain 
 - Docker
+- Google Cloud Run 
+- Netlify
 
 ## Installation
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
-3. Install the required dependencies using `pip install -r requirements.txt`.
-4. Set up your database configurations in `config.py`.
-5. Run the application using `python main.py`.
+3. Install `ReactJS`
+4. Install the library `npm axios`
+5. Install the required dependencies using `pip install -r requirements.txt`.
+6. Set up your database configurations in `config.py`.
+7. Run the application using `python main.py`.
+
 
 ## Usage
 1. Build Image using `docker build -t flask_app .`.
