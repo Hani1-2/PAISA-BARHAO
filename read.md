@@ -4,7 +4,7 @@
 1. Project is deployed at following URL `https://samrtinvestai.netlify.app/`.
 
 ## Project Architecture
-![SmartInvest.AI](architecture.png.png)
+![SmartInvest.AI](architecture.png)
 
 
 ## Description
