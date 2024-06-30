@@ -1,4 +1,4 @@
-# Project Name: SmartInvest.AI
+# Project Name: PAISA-BARHAO
 
 ## Project Deployment
 1. Project is deployed at the following URL `https://samrtinvestai.netlify.app/`.
