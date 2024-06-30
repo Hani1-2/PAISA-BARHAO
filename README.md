@@ -1,7 +1,7 @@
 # Project Name: PAISA-BARHAO
 
 ## Project Deployment
-1. Project is deployed at the following URL `https://samrtinvestai.netlify.app/`.
+1. Project is deployed at the following URL `https://paisabarhao.netlify.app/`.
 2. Google Cloud Run is used for the Backend and Netlify for Frontend deployment.
 
 ## Project Architecture
@@ -9,7 +9,7 @@
 
 
 ## Description
-SmartInvest.AI will provide accessible insights into various investment options tailored to the Pakistani market, including stocks, commodities, and mutual funds. Through the app, users can gain valuable information and comparisons to make informed investment decisions, promoting financial literacy and inclusion.
+PAISA-BARHAO will provide accessible insights into various investment options tailored to the Pakistani market, including stocks, commodities, and mutual funds. Through the app, users can gain valuable information and comparisons to make informed investment decisions, promoting financial literacy and inclusion.
 
 ## Technologies Used
 - Python
