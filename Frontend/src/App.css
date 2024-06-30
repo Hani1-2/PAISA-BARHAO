@@ -3,7 +3,7 @@
   display: flex;
   background-color: #282c34;
   /* color:#d96704; */
-  color: black;
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -13,18 +13,18 @@
 
 .sidemenu {
   width: 260px;
-  border: 1px solid rgb(58, 78, 94);
+  border: 1px solid rgb(60, 72, 82);
   /* background-color: #303030; */
   /* background-color: rgb(215, 217, 219); */
   background: linear-gradient(
     45deg,
-    #c4c1c1,
-    #cac7c7
+    #0f1312,
+    #0a0a0a
   ); /* Gradient from light gray to white */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
-    /* Shadow of white */ 0 0 40px rgba(255, 255, 255, 0.5),
+  box-shadow: 0 0 20px rgba(8, 17, 13, 0.5),
+    /* Shadow of white */ 0 0 40px rgba(20, 31, 30, 0.5),
     /* Increase blur for a more pronounced effect */ 0 0 60px
-      rgba(255, 255, 255, 0.5); /* Increase blur for a more pronounced effect */
+      rgba(17, 32, 32, 0.5); /* Increase blur for a more pronounced effect */
 }
 
 /* .submit-button {
@@ -36,40 +36,38 @@
 
 .chatbox {
   flex: 1;
-  border: 1px solid rgb(58, 78, 94);
+  border: 1px solid rgb(12, 19, 18);
   /* background-color: #818385; */
   /* background-color: rgb(235, 238, 240); */
   background: linear-gradient(
     45deg,
-    #dadada,
-    #ffffff
+    #030303,
+    #0d0f0f
   ); /* Gradient from light gray to white */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
-    /* Shadow of white */ 0 0 40px rgba(255, 255, 255, 0.5),
+  box-shadow: 0 0 20px rgba(23, 36, 31, 0.5),
+    /* Shadow of white */ 0 0 40px rgba(17, 27, 25, 0.5),
     /* Increase blur for a more pronounced effect */ 0 0 60px
-      rgba(255, 255, 255, 0.5); /* Increase blur for a more pronounced effect */
+      rgba(17, 22, 21, 0.5); /* Increase blur for a more pronounced effect */
   position: relative;
 }
 .side-menu-button {
   padding: 7px;
-  border: 1px solid rgb(58, 78, 94);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 16px;
   text-align: left;
   margin: 5px;
   transition: ease 0.25 all;
-  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 0 0 rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
-.add img {
-  width: 25px; /* Adjust the width as needed */
-  height: 20px; /* Allow the height to adjust proportionally */
-  padding-right: 5px;
-}
 
-.logo img {
+.add img,
+.logout img {
   padding-right: 5px;
   width: 25px; /* Adjust the width as needed */
   height: 20px; /* Allow the height to adjust proportionally */
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg)
+    brightness(100%) contrast(100%);
 }
 
 .side-menu-button.logout {
@@ -90,8 +88,8 @@
 
 .title-image {
   border-radius: 21px;
-  width: 50px; /* Adjust the width of the image */
-  height: auto; /* Allow the height to adjust proportionally */
+  width: 90px; /* Adjust the width of the image */
+  height: 75px; /* Allow the height to adjust proportionally */
   margin-right: 10px; /* Add some space between the image and the text */
   animation: swivelImage 2s ease-in-out infinite alternate; /* Swivel the image */
 }
@@ -134,6 +132,8 @@
   top: 50%; /* Position it vertically centered */
   transform: translateY(-50%); /* Center vertically */
   cursor: pointer; /* Change cursor to pointer on hover */
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg)
+    brightness(100%) contrast(100%);
 }
 
 .chat-input-textarea {
@@ -154,26 +154,34 @@
 } */
 
 .chat-input-holder {
-  padding:0px 14x 0px 10px;
+  padding: 0px;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Adjust as needed for size */
+  border-radius: 12px;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #ed6e61, #6359e1) border-box;
+  border: 3px solid transparent;
+  
 }
 .chat-input-textarea {
-  background-color: #f0eded;
-  width: 98%;
+  background-color: #161718;
+  width: 100%; /* Fills the holder */
   border: 5px;
   border-radius: 5px;
   border: 5px solid transparent;
   font-size: large;
-  padding: 12px;
-  color: black;
+  padding: 10px;
+  color: rgb(255, 255, 255);
   font-size: 1.25em;
   outline: none;
   /* margin-right: 5px;
   margin-left: 5px; */
-  margin-left: 5px;
+  margin-left: 0px;
   box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -208,7 +216,7 @@
 }
 
 .avatar.financegpt {
-  background: rgb(104, 212, 131);
+  background: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -232,8 +240,8 @@
 .avatar.financegpt > img {
   /* width: auto;
   height: auto; */
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 200%;
+  max-height: 200%;
   object-fit: cover;
 }
 

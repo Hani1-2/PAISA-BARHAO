@@ -1,21 +1,7 @@
-// import image from './image/logo1.png';
-// import image from './image/logo2.png';
-// import image from './image/logo3.png';
-// import image from './image/logo4.png';
 import me from './image/ME1.png';
-//import image from './image/logo5.png';
-//import image from './image/logo6.png';
-//import image from './image/logo7.png';
-//import image from './image/logo8.png';
-//import image from './image/logo9.png';
-//import image from './image/logo10.png';
-//import image from './image/logo10.png';
-//import image from './image/logo11.png';
-//import image from './image/logo12.png';
-//import image from './image/logo13.png';
-import image from './image/logo10.png';
+import image from './image/mainlogo.png';
 import add from './image/add.png';
-import logo from './image/logo.png';
+import logout from './image/logout.png';
 import submit from './image/submit.png';
 import axios from 'axios';
 import './App.css';
@@ -45,44 +31,15 @@ function App() {
 
   }
 
-  // function getEngines(){
-  //   //fetch API
-  //   fetch("http://localhost:3080/models")
-  //   .then(res=>res.json())
-  //   .then(data=>console.log(data))
-  // }
-  // async function handleSubmit(e) {
-  //   e.preventDefault();
-  //   let chatLogNew = [...chatLog, { user: "me", message: `${input}` }]
-  //   setInput("");
-  //   setChatLog(chatLogNew)
-  //   //await setInput("");
-  //   //fetch response to api combining the chat log array of messages 
-  //   //and sending it as a message to localhost:3000 as a post
-  //   //const messages = chatLogNew.map((message) => message.message).join("\n")
-  //   //const messages = chatLog.map((message)=>message.message).join("\n")
-  //   // const response = await fetch("https://deployfinanacegpt.onrender.com", {
-  //     const response = await fetch("https://flask-app-oaovyo3kcq-uc.a.run.app/api/ask_question", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({
-  //       question: messages
-  //     })
-  //   });
-  //   const data = await response.json();
-  //   setChatLog([...chatLogNew, { user: "gpt", message: `${data.message}` }])
-  //   console.log(data);
-  // }
-  // const handleUpdateAPI = async () => {
-  //   try {
-  //     const response = await axios.get('https://flask-app-oaovyo3kcq-uc.a.run.app/api/create_vector_db');
-  //     console.log(response.data);
-  //   } catch (error) {
-  //     console.error('Error calling the API:', error);
-  //   }
-  // };
+  
+  const handleUpdateAPI = async () => {
+    try {
+      const response = await axios.get('https://flask-app-oaovyo3kcq-uc.a.run.app/api/create_vector_db');
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error calling the API:', error);
+    }
+  };
 
 
 
@@ -96,10 +53,7 @@ function App() {
     setInput("");
 
     try {
-      // Combine chat log messages
-      //const messages = chatLogNew.map((message) => message.message).join("\n");
-      //const messages = chatLogNew.map((message) => message.message);
-      //console.log("input",messages)
+      
 
       // Make POST request to the API
       const response = await axios.post("https://flask-app-oaovyo3kcq-uc.a.run.app/api/ask_question", {
@@ -136,7 +90,7 @@ function App() {
       <aside className="sidemenu">
         <div className="title-with-image">
           <img src={image} alt="FinanceGPT" className="title-image" />
-          <span className="title-text">Smart Invest</span>
+          <span className="title-text">PESA BARHAO</span>
         </div>
         <div className="side-menu-button" onClick={clearChat}>
 
@@ -147,16 +101,16 @@ function App() {
             New Chat
           </div>
         </div>
-        {/* <div className='side-menu-button update' onClick={handleUpdateAPI}> 
+        <div className='side-menu-button update' onClick={handleUpdateAPI}> 
           <span className='update'>
             Update Stock
 
           </span>
-        </div> */}
+        </div>
         <div className="side-menu-button logout" onClick={LogOut}>
 
-          <span className="logo">
-            <img src={logo} alt="Logo" />
+          <span className="logout">
+            <img src={logout} alt="Logo" />
           </span>
           Logout
 
@@ -194,20 +148,7 @@ function App() {
         </div>
 
       </section>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      
     </div>
   );
 }
